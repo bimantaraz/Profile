@@ -1,28 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <title>My Profile</title>
-</head>
-<body class="bg-gray-100">
-    <div class="flex justify-center items-center min-h-screen bg-gray-100">
-        <div class="bg-white p-8 shadow-lg rounded-lg max-w-md w-full">
-            <div class="flex justify-center">
-                <img src="https://via.placeholder.com/150" alt="Profile Picture" class="w-32 h-32 rounded-full">
-            </div>
-            <h1 class="text-3xl font-semibold text-center mt-4 text-gray-800">John Doe</h1>
-            <p class="text-center text-gray-600 mb-4">Web Developer</p>
-            <p class="text-gray-600 leading-relaxed">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tempus, libero sed consectetur convallis.</p>
-            <div class="flex justify-center mt-6">
-                <a href="#" class="text-blue-500 hover:underline">Website</a>
-                <span class="mx-2 text-gray-400">|</span>
-                <a href="#" class="text-blue-500 hover:underline">LinkedIn</a>
-                <span class="mx-2 text-gray-400">|</span>
-                <a href="#" class="text-blue-500 hover:underline">Twitter</a>
-            </div>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow">
+      <div class="container">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Project</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+            </li>
+          </ul>
         </div>
-    </div>
-</body>
+      </div>
+    </nav>
+    <!-- Akhir Navbar -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+  </body>
 </html>
