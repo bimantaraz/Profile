@@ -184,13 +184,13 @@
     </footer>
     <!-- End Footer -->
 
-      
+    <!-- Menlakankan Contact Menuju google sheet --> 
    <script>
-     const scriptURL = 'https://script.google.com/macros/s/AKfycbzwj223RNSNcKYHXZGYsM18ZiFJQM8A0YBQ24t56I0IPeO83nK5q3y_-wOjFvCO8ZLCdw/exec'
-     const form = document.forms['submit-to-google-sheet']
-     const btnKirim = document.querySelector('.btn-kirim');
-     const btnLoading = document.querySelector('.btn-loading');
-     const myalert = document.querySelector('.my-alert');
+     const scriptURL = 'https://script.google.com/macros/s/AKfycbzwj223RNSNcKYHXZGYsM18ZiFJQM8A0YBQ24t56I0IPeO83nK5q3y_-wOjFvCO8ZLCdw/exec' // link ke google sheet
+     const form = document.forms['submit-to-google-sheet'] // nama form
+     const btnKirim = document.querySelector('.btn-kirim'); // tombol kirim
+     const btnLoading = document.querySelector('.btn-loading'); // tombol loading
+     const myalert = document.querySelector('.my-alert'); // notif berhasil terkirim
    
      form.addEventListener('submit', e => {
        e.preventDefault()
@@ -198,6 +198,7 @@
        btnLoading.classList.toggle('d-none');
        btnKirim.classList.toggle('d-none');
 
+        // Mengirimkan pesan ke google sheet
        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
          .then(response => {
           // Menampilkan tombol kirim, Menghilangkan tombol loading
@@ -207,6 +208,7 @@
           myalert.classList.toggle('d-none');
           // reset form
           form.reset();
+          // Pesan berhasil dikirim
           console.log('Success!', response)
          })
          .catch(error => console.error('Error!', error.message))
