@@ -7,8 +7,9 @@
     <title>Profile - Bima</title>
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-    <!-- Icon Title -->
-    <link rel="shortcut icon" href="https://anugrahbimantara.my.id/IMG_20220928_063400%20(1).jpg" type="image/x-icon">  
+
+    <link rel="shortcut icon" href="https://anugrahbimantara.my.id/IMG_20220928_063400%20(1).jpg" type="image/x-icon">
+
     <!-- CSS -->
     <style>
         body {
@@ -18,6 +19,19 @@
         .jumbotron {
         padding-top: 6rem;
         background-color: #e2edff;
+        }
+        .card-link, .card-link:hover, .card-link:focus {
+        text-decoration: none;
+        outline: none;
+        }
+        .card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: none;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
         }
         #projects {
             background-color: #e2edff;
@@ -95,44 +109,54 @@
             </div>
             <div class="row justify-content-center">
                 <div class="col-md-4 mb-3">
-                    <div class="card">
+                    <a href="#projects-link" class="card-link">
+                      <div class="card">
                         <img src="https://anugrahbimantara.my.id/project.jpg" class="card-img-top" alt="Gambar Project">
                         <div class="card-body">
                           <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                         </div>
                       </div>
+                    </a>
                 </div>
                 <div class="col-md-4 mb-3">
+                    <a href="#projects-link" class="card-link">
                     <div class="card">
                         <img src="https://anugrahbimantara.my.id/project.jpg" class="card-img-top" alt="Gambar Project">
                         <div class="card-body">
                           <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                         </div>
                       </div>
+                      </a>
                 </div>
                 <div class="col-md-4 mb-3">
+                    <a href="#projects-link" class="card-link">
                     <div class="card">
                         <img src="https://anugrahbimantara.my.id/project.jpg" class="card-img-top" alt="Gambar Project">
                         <div class="card-body">
                           <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                         </div>
                       </div>
+                    </a>
                 </div>
                 <div class="col-md-4 mb-3">
+                    <a href="#projects-link" class="card-link">
                     <div class="card">
                         <img src="https://anugrahbimantara.my.id/project.jpg" class="card-img-top" alt="Gambar Project">
                         <div class="card-body">
                           <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                         </div>
                       </div>
+                    </a>
                 </div>
                 <div class="col-md-4 mb-3">
+                    <a href="#projects-link" class="card-link">
                     <div class="card">
                         <img src="https://anugrahbimantara.my.id/project.jpg" class="card-img-top" alt="Gambar Project">
                         <div class="card-body">
                           <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                         </div>
                       </div>
+                    </a>
                 </div>
             </div>
         </div>
@@ -186,29 +210,34 @@
     </footer>
     <!-- End Footer -->
 
-    <!-- Agar form tersimpan di google sheet --> 
+    <!-- Agar form tersimpan di google sheet -->
    <script>
      const scriptURL = 'https://script.google.com/macros/s/AKfycbzwj223RNSNcKYHXZGYsM18ZiFJQM8A0YBQ24t56I0IPeO83nK5q3y_-wOjFvCO8ZLCdw/exec' // link ke google sheet
      const form = document.forms['submit-to-google-sheet'] // nama form
      const btnKirim = document.querySelector('.btn-kirim'); // tombol kirim
      const btnLoading = document.querySelector('.btn-loading'); // tombol loading
      const myalert = document.querySelector('.my-alert'); // notif berhasil terkirim
-   
+
      form.addEventListener('submit', e => {
        e.preventDefault()
-       btnLoading.classList.toggle('d-none'); // Menampilkan tombol loading
-       btnKirim.classList.toggle('d-none'); // Menghilangkan tombol kirim
+       // Menampilkan tombol loading, Menghilangkan tombol kirim
+       btnLoading.classList.toggle('d-none');
+       btnKirim.classList.toggle('d-none');
 
         // Mengirimkan pesan ke google sheet
        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
          .then(response => {
-          btnLoading.classList.toggle('d-none'); // Menghilangkan tombol loading
-          btnKirim.classList.toggle('d-none'); // Menampilkan tombol kirim
-          myalert.classList.toggle('d-none'); // Menampilkan notif berhasil terkirim
-          form.reset(); // Riset form
-          console.log('Success!', response) // Pesan berhasil terkirim
+          // Menampilkan tombol kirim, Menghilangkan tombol loading
+          btnLoading.classList.toggle('d-none');
+          btnKirim.classList.toggle('d-none');
+          // Menampilkan alert
+          myalert.classList.toggle('d-none');
+          // reset form
+          form.reset();
+          // Pesan berhasil dikirim
+          console.log('Success!', response)
          })
-         .catch(error => console.error('Error!', error.message)) // Menampilkan error di console
+         .catch(error => console.error('Error!', error.message))
      })
    </script>
 
