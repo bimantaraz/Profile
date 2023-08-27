@@ -184,7 +184,7 @@
     </footer>
     <!-- End Footer -->
 
-    <!-- Menlakankan Contact Menuju google sheet --> 
+    <!-- Agar form tersimpan di google sheet --> 
    <script>
      const scriptURL = 'https://script.google.com/macros/s/AKfycbzwj223RNSNcKYHXZGYsM18ZiFJQM8A0YBQ24t56I0IPeO83nK5q3y_-wOjFvCO8ZLCdw/exec' // link ke google sheet
      const form = document.forms['submit-to-google-sheet'] // nama form
@@ -211,7 +211,7 @@
           // Pesan berhasil dikirim
           console.log('Success!', response)
          })
-         .catch(error => console.error('Error!', error.message))
+         .catch(error => console.error('Error!', error.message)) // Menampilkan error di console
      })
    </script>
 
