@@ -7,6 +7,8 @@
     <title>Profile - Bima</title>
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <!-- Icon Title -->
+    <link rel="shortcut icon" href="https://anugrahbimantara.my.id/IMG_20220928_063400%20(1).jpg" type="image/x-icon">  
     <!-- CSS -->
     <style>
         body {
@@ -194,22 +196,17 @@
    
      form.addEventListener('submit', e => {
        e.preventDefault()
-       // Menampilkan tombol loading, Menghilangkan tombol kirim
-       btnLoading.classList.toggle('d-none');
-       btnKirim.classList.toggle('d-none');
+       btnLoading.classList.toggle('d-none'); // Menampilkan tombol loading
+       btnKirim.classList.toggle('d-none'); // Menghilangkan tombol kirim
 
         // Mengirimkan pesan ke google sheet
        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
          .then(response => {
-          // Menampilkan tombol kirim, Menghilangkan tombol loading
-          btnLoading.classList.toggle('d-none');
-          btnKirim.classList.toggle('d-none');
-          // Menampilkan alert
-          myalert.classList.toggle('d-none');
-          // reset form
-          form.reset();
-          // Pesan berhasil dikirim
-          console.log('Success!', response)
+          btnLoading.classList.toggle('d-none'); // Menghilangkan tombol loading
+          btnKirim.classList.toggle('d-none'); // Menampilkan tombol kirim
+          myalert.classList.toggle('d-none'); // Menampilkan notif berhasil terkirim
+          form.reset(); // Riset form
+          console.log('Success!', response) // Pesan berhasil terkirim
          })
          .catch(error => console.error('Error!', error.message)) // Menampilkan error di console
      })
