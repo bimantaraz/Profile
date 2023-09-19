@@ -73,7 +73,7 @@
     <section class="jumbotron text-center">
         <img src="https://anugrahbimantara.my.id/IMG_20220928_063400%20(1).jpg" alt="Foto Profile" width="200" class="rounded-circle img-thumbnail">
       <h1 class="display-4">Anugrah Bimantara</h1>
-      <p class="lead">All Things</p>
+      <p class="lead">Hallo</p>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#ffffff" fill-opacity="1" d="M0,160L30,160C60,160,120,160,180,170.7C240,181,300,203,360,224C420,245,480,267,540,256C600,245,660,203,720,170.7C780,139,840,117,900,101.3C960,85,1020,75,1080,80C1140,85,1200,107,1260,112C1320,117,1380,107,1410,101.3L1440,96L1440,320L1410,320C1380,320,1320,320,1260,320C1200,320,1140,320,1080,320C1020,320,960,320,900,320C840,320,780,320,720,320C660,320,600,320,540,320C480,320,420,320,360,320C300,320,240,320,180,320C120,320,60,320,30,320L0,320Z"></path></svg>
     </section>
     <!-- End Jumbotron -->
